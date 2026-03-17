@@ -1,0 +1,16 @@
+packages:
+  "framer-motion": "For smooth list reordering, progress bar animations, and page transitions"
+  "uuid": "For generating unique reliable IDs for books"
+  "@types/uuid": "Types for uuid package"
+  "canvas-confetti": "For visual celebration when completing a book"
+  "@types/canvas-confetti": "Types for canvas-confetti package"
+  "date-fns": "For formatting completion dates nicely"
+  "clsx": "For conditional class merging"
+  "tailwind-merge": "For merging tailwind classes safely"
+
+images: []
+
+notes:
+  - App is entirely client-side using localStorage for persistence
+  - Strict design constraints: Pure white background, Inter font, brown headers
+  - No backend integration required

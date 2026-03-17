@@ -1,0 +1,25 @@
+YKS 2026 hazırlık sürecim için kitap bazlı bir ilerleme takip sitesi oluşturmanı istiyorum. Aşağıdaki teknik ve görsel detaylara harfiyen sadık kalarak modern, minimalist ve aşırı basit bir yapı kur:
+​1. Görsel Tasarım ve Tema:
+​Arka Plan: Cihaz teması (koyu mod/açık mod) ne olursa olsun arka plan daima saf beyaz (#FFFFFF) olmalıdır.
+​Başlık: Sayfanın en üstünde büyük, kahverengi renkte 'Yks 2026 TAKİP' yazmalı.
+​Yazı Tipi ve Renk: Şık ve okunaklı bir Sans-Serif yazı tipi seç (Örn: Inter veya Montserrat). Tüm metinler siyah renkte olmalı ve normalden biraz daha büyük punto kullanılmalı.
+​2. YKS 2026 Sayacı:
+​Sayfanın en başında, başlığın hemen altında yer almalı.
+​Hedef tarih: 20 Haziran 2026, Saat 10:15.
+​Sayaç; gün, saat, dakika ve saniye bazında anlık olarak internet saatiyle senkronize güncellenmelidir.
+​3. Genel İlerleme Durumu:
+​YKS sayacının hemen altında, eklenen tüm kitapların toplam sayfa sayısı ile toplam okunan sayfa sayısını baz alan genel bir yüzde barı ve verisi olmalı.
+​Hesaplama Mantığı: (Tüm kitapların mevcut sayfaları toplamı / Tüm kitapların toplam sayfa sayıları toplamı) * 100 formülünü kullanmalıdır.
+​4. Kitap Ekleme ve Takip Sistemi:
+​Kullanıcı bir 'Kitap Adı', 'Toplam Sayfa Sayısı' ve 'Şu Anki Sayfa' girebilmeli.
+​Tüm bu alanlar manuel olmalı; sayılar sadece klavye ile girilmeli, kaydırma çubuğu veya otomatik artırma olmamalı.
+​Kitapların toplam sayfa sayısı dahil her detayı her an güncellenebilir (editable) olmalıdır.
+​Yüzdelik Algoritması: Kullanıcı 'Enter' tuşuna bastığında veya sayfadan odak çıktığında o kitabın bitme yüzdesini hesapla.
+​Görsel Uyarı: Kitabın %80'i ve fazlası bittiyse yazı/oran yeşil, %80'den azı bittiyse kırmızı görünmeli.
+​5. Sıralama ve Listeleme:
+​Eklenen kitaplar, bitirme yüzdesi en yüksek olandan en düşük olana doğru otomatik olarak sıralanmalıdır.
+​Kitap %100 olduğunda listeden çıkarılıp sayfanın en altındaki 'Bitirdiğim Kitaplar' bölümüne taşınmalıdır.
+​6. Bitirdiğim Kitaplar Bölümü:
+​Sayfanın en altında yer almalı.
+​Kitaplar, bitirilme sırasına göre (ilk biten en üstte olacak şekilde) kronolojik listelenmelidir.
+​Lütfen bu yapıyı temiz bir Node.js ve React/Vite altyapısı kullanarak kur. Karmaşık menülerden kaçın, her şey tek bir sayfada ve aşırı anlaşılır olsun."

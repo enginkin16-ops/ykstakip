@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: 'Inter', sans-serif;
+  
+  /* Core brand colors */
+  --color-background: #FFFFFF;
+  --color-foreground: #000000;
+  --color-primary: #7B4B2A; /* Warm brown */
+  --color-primary-foreground: #FFFFFF;
+  --color-primary-light: #9A6540;
+  
+  --color-success: #16A34A; /* >= 80% */
+  --color-danger: #DC2626;  /* < 80% */
+  
+  --color-muted: #F3F4F6;
+  --color-muted-foreground: #6B7280;
+  --color-border: #E5E7EB;
+}
+
+@layer base {
+  /* Enforce absolute white background regardless of OS theme */
+  html, body {
+    background-color: var(--color-background) !important;
+    color: var(--color-foreground) !important;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 17px; /* Slightly larger base size as requested */
+  }
+
+  /* Hide number input spinners universally */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+}
+
+/* Custom utilities for sleek inputs */
+@layer utilities {
+  .sleek-input {
+    @apply w-full bg-transparent border-b-2 border-border px-1 py-2 text-foreground focus:outline-none focus:border-primary transition-colors duration-200;
+  }
+  .sleek-input-error {
+    @apply border-danger focus:border-danger;
+  }
+}

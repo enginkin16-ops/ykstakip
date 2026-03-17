@@ -21,7 +21,8 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 ```text
 artifacts-monorepo/
 ├── artifacts/              # Deployable applications
-│   └── api-server/         # Express API server
+│   ├── api-server/         # Express API server
+│   └── yks-takip/          # YKS 2026 Takip - book tracking app (React + Vite, previewPath: /)
 ├── lib/                    # Shared libraries
 │   ├── api-spec/           # OpenAPI spec + Orval codegen config
 │   ├── api-client-react/   # Generated React Query hooks
@@ -34,6 +35,26 @@ artifacts-monorepo/
 ├── tsconfig.json           # Root TS project references
 └── package.json            # Root package with hoisted devDeps
 ```
+
+## Artifacts
+
+### `artifacts/yks-takip` (`@workspace/yks-takip`)
+
+YKS 2026 exam preparation book progress tracking app.
+
+- **Type**: react-vite, frontend-only (no backend)
+- **PreviewPath**: `/`
+- **Features**:
+  - Real-time countdown to June 20, 2026 at 10:15 (Turkey time UTC+3)
+  - Overall progress bar across all active books
+  - Add/edit/delete books with name, total pages, current page
+  - Books sorted by completion percentage (highest first)
+  - Color coding: ≥80% green, <80% red
+  - Auto-move to "Bitirdiğim Kitaplar" section at 100%
+  - Completed books shown chronologically
+  - All data persisted in localStorage
+- **Design**: Always white background (#FFFFFF), Inter font, black text, brown (#7B4B2A) primary color
+- **Dependencies**: framer-motion, uuid, date-fns, canvas-confetti
 
 ## TypeScript & Composite Projects
 

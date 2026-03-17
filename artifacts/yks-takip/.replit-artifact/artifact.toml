@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "YKS 2026 Takip"
+version = "1.0.0"
+id = "artifacts/yks-takip"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+localPort = 23159
+name = "web"
+paths = ["/"]
+
+[services.development]
+run = "pnpm --filter @workspace/yks-takip run dev"
+
+[services.env]
+PORT = "23159"
+BASE_PATH = "/"
+
+[services.production]
+build = ["pnpm", "--filter", "@workspace/yks-takip", "run", "build"]
+publicDir = "artifacts/yks-takip/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
