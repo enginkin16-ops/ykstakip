@@ -1,5 +1,4 @@
 import { useBooks } from "@/hooks/use-books";
-import { Countdown } from "@/components/Countdown";
 import { ProgressBar } from "@/components/ProgressBar";
 import { AddBook } from "@/components/AddBook";
 import { ActiveBookItem } from "@/components/ActiveBookItem";
@@ -31,9 +30,6 @@ export function Home() {
             Yks 2026 TAKİP
           </h1>
         </header>
-
-        {/* COUNTDOWN */}
-        <Countdown />
 
         {/* PROGRESS */}
         <ProgressBar progress={overallProgress} />
